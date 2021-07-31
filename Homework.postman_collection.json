@@ -1,0 +1,247 @@
+{
+	"info": {
+		"_postman_id": "835a5b3a-7fc2-46de-a422-d61430653983",
+		"name": "Homework",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWxleF90ZXN0ZXI6MTIzNDU2",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://api-qa.skillbox.ru/practice2/api/users/?location=Тверь",
+					"protocol": "http",
+					"host": [
+						"api-qa",
+						"skillbox",
+						"ru"
+					],
+					"path": [
+						"practice2",
+						"api",
+						"users",
+						""
+					],
+					"query": [
+						{
+							"key": "location",
+							"value": "Тверь"
+						}
+					]
+				},
+				"description": "Не работает фильтрация по городу"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users Filter Name",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWxleF90ZXN0ZXI6MTIzNDU2",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://api-qa.skillbox.ru/practice2/api/users/?name=Test",
+					"protocol": "http",
+					"host": [
+						"api-qa",
+						"skillbox",
+						"ru"
+					],
+					"path": [
+						"practice2",
+						"api",
+						"users",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Test"
+						}
+					]
+				},
+				"description": "Не работает фильтрация по имени"
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWxleF90ZXN0ZXI6MTIzNDU2",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://api-qa.skillbox.ru/practice2/api/users/4",
+					"protocol": "http",
+					"host": [
+						"api-qa",
+						"skillbox",
+						"ru"
+					],
+					"path": [
+						"practice2",
+						"api",
+						"users",
+						"4"
+					]
+				},
+				"description": "Не сохраняется информация о заполненных полях Отчество и город"
+			},
+			"response": []
+		},
+		{
+			"name": "POST",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36"
+					},
+					{
+						"key": "DNT",
+						"value": "1"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic undefined"
+					},
+					{
+						"key": "Content-type",
+						"value": "application/json; charset=UTF-8"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Origin",
+						"value": "http://api-qa.skillbox.ru"
+					},
+					{
+						"key": "Referer",
+						"value": "http://api-qa.skillbox.ru/practice1/"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7"
+					},
+					{
+						"key": "Cookie",
+						"value": "_gcl_au=1.1.1013490139.1610044442; sbjs_current=typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29; utm_aggregated_data=utm_source=(direct)|||utm_medium=(none)|||utm_campaign=(none)|||utm_content=(none)|||utm_term=(none); _ga=GA1.2.1217317967.1610044443; tmr_lvid=82bbd73304a3a1d2409d64e3156859c8; tmr_lvidTS=1610044443658; _gid=GA1.2.838711647.1612690050; sbjs_first=typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29; sbjs_migrations=1418474375998%3D1; sbjs_udata=vst%3D4%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Windows%20NT%2010.0%3B%20Win64%3B%20x64%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F88.0.4324.146%20Safari%2F537.36; tmr_reqNum=20; _gat=1"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"Username\":\"alex_tester\",\"Password\":\"123456\"}"
+				},
+				"url": {
+					"raw": "http://api-qa.skillbox.ru/practice1/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"api-qa",
+						"skillbox",
+						"ru"
+					],
+					"path": [
+						"practice1",
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36"
+					},
+					{
+						"key": "DNT",
+						"value": "1"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic YWxleF90ZXN0ZXI6MTIzNDU2"
+					},
+					{
+						"key": "Content-type",
+						"value": "application/json; charset=UTF-8"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Origin",
+						"value": "http://api-qa.skillbox.ru"
+					},
+					{
+						"key": "Referer",
+						"value": "http://api-qa.skillbox.ru/practice2/"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7"
+					},
+					{
+						"key": "Cookie",
+						"value": "Authorization=YWxleF90ZXN0ZXI6MTIzNDU2; _gcl_au=1.1.1013490139.1610044442; sbjs_current=typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29; utm_aggregated_data=utm_source=(direct)|||utm_medium=(none)|||utm_campaign=(none)|||utm_content=(none)|||utm_term=(none); _ga=GA1.2.1217317967.1610044443; tmr_lvid=82bbd73304a3a1d2409d64e3156859c8; tmr_lvidTS=1610044443658; _gid=GA1.2.838711647.1612690050; sbjs_first=typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29; sbjs_migrations=1418474375998%3D1; sbjs_udata=vst%3D4%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Windows%20NT%2010.0%3B%20Win64%3B%20x64%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F88.0.4324.146%20Safari%2F537.36; tmr_reqNum=20"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ItemsOfClients\": [\r\n        {\r\n            \"Person\": {\r\n                \"Name\": \"александров\",\r\n                \"Surname\": \"александр\",\r\n                \"Patronymic\": \"Николаевич\",\r\n                \"DateOfBirth\": \"2001-01-01\",\r\n                \"Location\": \"Тверь\"\r\n            }\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://api-qa.skillbox.ru/practice2/api/users/create",
+					"protocol": "http",
+					"host": [
+						"api-qa",
+						"skillbox",
+						"ru"
+					],
+					"path": [
+						"practice2",
+						"api",
+						"users",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
